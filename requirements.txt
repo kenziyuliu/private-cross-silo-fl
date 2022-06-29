@@ -1,0 +1,11 @@
+numpy
+tqdm
+scikit-learn
+pandas
+optax
+jax==0.2.27
+dm-haiku==0.0.5
+optax==0.1.0
+tensorflow_privacy==0.7.3
+scipy>=1.7.3
+filelock

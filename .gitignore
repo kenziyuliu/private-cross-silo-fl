@@ -1,0 +1,7 @@
+logs
+__pycache__/
+stash.py
+stash/
+figures
+.DS_Store
+*.zip
