@@ -3,5 +3,7 @@ __pycache__/
 stash.py
 stash/
 figures
+data/dp_accounting_cache.pickle*
+data/vehicle
 .DS_Store
 *.zip
