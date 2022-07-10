@@ -46,7 +46,6 @@ class Ditto(BaseTrainerLocal):
     local_params = []
     for t in range(self.num_clients):
       local_params.append(self.model.init(key, data_batch))
-      key = random.fold_in(key, t)
     local_global_updates = [0] * self.num_clients
 
     # Optimizer shared for every client (re-init before client work)

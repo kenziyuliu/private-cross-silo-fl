@@ -61,7 +61,6 @@ class IFCA_MRMTL(BaseTrainerLocal):
     local_params = []
     for t in range(self.num_clients):
       local_params.append(self.model.init(key, data_batch))
-      key = random.fold_in(key, t)
     local_updates = [0] * self.num_clients
 
     # Optimizer shared for every client (re-init before client work)
@@ -208,7 +207,7 @@ class IFCA_MRMTL(BaseTrainerLocal):
         if len(cluster_2_client[k]) > 0:
           model_updates = [local_updates[t] for t in cluster_2_client[k]]
           update_weights = [self.update_weights[t] for t in cluster_2_client[k]]
-          average_update = jax_utils.model_average(model_updates, weights=update_weights)
+          average_update = jax_utils.model_average(model_updates, weights=jnp.asarray(update_weights))
           cluster_params[k] = jax_utils.model_add(cluster_params[k], average_update)
 
       local_updates = [0] * self.num_clients

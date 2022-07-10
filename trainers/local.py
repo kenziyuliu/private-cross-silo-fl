@@ -30,7 +30,6 @@ class Local(BaseTrainerLocal):
     local_params = []
     for t in range(self.num_clients):
       local_params.append(self.model.init(key, data_batch))
-      key = random.fold_in(key, t)
 
     # Optimizer shared for every client (re-init before client work)
     # opt = optimizers.momentum(self.lr, mass=0.9)

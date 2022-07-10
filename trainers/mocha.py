@@ -39,7 +39,6 @@ class Mocha(BaseTrainerLocal):
     local_params = []
     for t in range(self.num_clients):
       local_params.append(self.model.init(key, data_batch))
-      key = random.fold_in(key, t)
     local_updates = [0] * self.num_clients
     Sigma = np.eye(self.num_clients) * (1.0 / self.num_clients)
 
