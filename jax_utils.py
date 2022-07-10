@@ -153,7 +153,7 @@ def model_multiply_scalar(params, factor):
 @jit
 def model_average(params_list, weights=None):
   def average_fn(*tensor_list):
-    return jnp.average(tensor_list, axis=0, weights=weights)
+    return jnp.average(jnp.asarray(tensor_list), axis=0, weights=weights)
 
   return tree_map(average_fn, *params_list)
 

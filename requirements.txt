@@ -2,7 +2,8 @@ numpy
 tqdm
 scikit-learn
 pandas
-jax==0.2.27
+jax==0.3.12
+jaxlib==0.3.10
 dm-haiku==0.0.5
 optax==0.1.0
 tensorflow_privacy==0.7.3
