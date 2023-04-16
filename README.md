@@ -91,9 +91,11 @@ Please consider citing our work if you find this repo useful:
 
 ```BibTeX
 @article{liu2022privacy,
-  title={On Privacy and Personalization in Cross-Silo Federated Learning},
-  author={Liu, Ziyu and Hu, Shengyuan and Wu, Zhiwei Steven and Smith, Virginia},
-  journal={arXiv preprint arXiv:2206.07902},
+  title={On privacy and personalization in cross-silo federated learning},
+  author={Liu, Ken and Hu, Shengyuan and Wu, Steven Z and Smith, Virginia},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={5925--5940},
   year={2022}
 }
 ```
